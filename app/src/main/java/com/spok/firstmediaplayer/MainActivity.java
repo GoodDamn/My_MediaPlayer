@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             for (int i = 0; i < cursor.getColumnCount(); i++) // Заполняем ArrayList с местонахождением файлов и получаем название трека и исполнителя.
             {
                 locations.add(cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.DATA)));
-                tracks.add(cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.TITLE)) + " - " + cursor.getColumnIndex(MediaStore.Audio.Media.ARTIST));
+                tracks.add(cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.TITLE)) + " - " + cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.ARTIST)));
                 cursor.moveToNext();
             }
         }
